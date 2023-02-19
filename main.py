@@ -35,17 +35,12 @@ def main():
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     
-    if "I" in text:
-        mismatch = find_mismatch(text)
-        if mismatch is None:
-            print("Success")
-        else:
-            print(mismatch.position)
+    if "I" in text and mismatch is not None:
+        print(mismatch.position)
+    elif mismatch is None:
+        print("Success")
     else:
-        if mismatch is None:
-            print("Success")
-        else:
-            print(mismatch.position)
+        print(mismatch.position)
     
 
 if __name__ == "__main__":
