@@ -38,6 +38,11 @@ def main():
         print("Success")
     else:
         print(mismatch.position)
+        
+    if "I" in text:
+        text = input()
+        mismatch = find_mismatch(text)
+        print(mismatch.position)
 
 if __name__ == "__main__":
     main()
