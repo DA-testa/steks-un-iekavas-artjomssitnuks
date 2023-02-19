@@ -30,19 +30,17 @@ def find_mismatch(text):
     return None
 
 
-def main():
+def main(): 
     text = input()
     mismatch = find_mismatch(text)
-    # Printing answer, write your code here
-    if mismatch is None:
-        print("Success")
-    else:
-        print(mismatch.position)
-        
     if "I" in text:
-        text = input()
-        mismatch = find_mismatch(text)
-        print(mismatch.position)
+    # Printing answer, write your code here
+        if mismatch is None:
+            print("Success")
+        else:
+            print(mismatch.position)
+        
+    
 
 if __name__ == "__main__":
     main()
