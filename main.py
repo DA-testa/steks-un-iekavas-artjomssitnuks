@@ -32,14 +32,20 @@ def find_mismatch(text):
 
 def main(): 
     text = input()
-    mismatch = find_mismatch(text)
     if "I" in text:
-    # Printing answer, write your code here
+        text = input()
+        mismatch = find_mismatch(text)
+        # Printing answer, write your code here
+            if mismatch is None:
+                print("Success")
+            else:
+                print(mismatch.position)
+    else:
+        mismatch = find_mismatch(text) 
         if mismatch is None:
             print("Success")
         else:
             print(mismatch.position)
-        
     
 
 if __name__ == "__main__":
