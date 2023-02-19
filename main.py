@@ -31,13 +31,14 @@ def find_mismatch(text):
 
 
 def main():
-    input_str = input().strip()  
-    i_index = input_str.find("I")  
-    if i_index != -1:        
-        mismatch = find_mismatch(input_str[i_index:])
-    else:        
-        mismatch = find_mismatch(input_str)
-        
+    first_input = input()
+    if first_input.startswith("I"):
+        second_input = input()
+        text = second_input.strip()
+    else:
+        text = first_input.strip()
+
+    mismatch = find_mismatch(text)
     if mismatch is None:
         print("Success")
     else:
