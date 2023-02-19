@@ -31,17 +31,17 @@ def find_mismatch(text):
 
 
 def main():
-    i_input = input()
-    text_input = input().rstrip()
-    has_i = "I" in i_input
-    mismatch = find_mismatch(text_input)
-    if has_i and mismatch is not None:
-        print(mismatch.position)
-    elif mismatch is None:
+    input_str = input().strip()  
+    i_index = input_str.find("I")  
+    if i_index != -1:        
+        mismatch = find_mismatch(input_str[i_index:])
+    else:        
+        mismatch = find_mismatch(input_str)
+        
+    if mismatch is None:
         print("Success")
     else:
         print(mismatch.position)
-
     
 
 if __name__ == "__main__":
